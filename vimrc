@@ -146,7 +146,7 @@ call vundle#begin()
 	Plugin 'winmanager'
 	Plugin 'godlygeek/tabular'
 	Plugin 'Markdown'
-	Plugin 'instant-markdown.vim'
+"	Plugin 'instant-markdown.vim'
 	Plugin 'suan/vim-instant-markdown'
 	Plugin 'Valloric/YouCompleteMe'						  		"自动补齐
 	Plugin 'ctrlp.vim'                                    		"文件搜索
