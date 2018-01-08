@@ -102,10 +102,9 @@ if has("cscope")
 	" else search cscope.out elsewhere
 	else
 		let cscope_file=findfile("cscope.out", ".;")
-		let cscope_pre=matchstr(cscope_file, ".*/") 
 		" echo cscope_file
-		if !empty(cscope_file) && filereadable(cscope_file) 
-			exe "cs add" cscope_file cscope_pre
+		if !empty(cscope_file) && filereadable(cscope_file)
+			exe "cs add" cscope_file
 		endif
 	endif
 endif
