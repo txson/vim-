@@ -1,5 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/home/raoxu/v1.9.7-0/gxbus/player'
-let g:netrw_dirhist_2='/home/raoxu/v1.9.7-0/gxavdev/avcore/vpu/gx3201'
-let g:netrw_dirhist_3='/home/raoxu/v1.9.7-0/gxavdev'

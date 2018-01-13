@@ -5,8 +5,8 @@ set completeopt=preview,menu		" 代码补全
 set clipboard+=unnamed				" 共享剪贴板
 set nobackup						" 从不备份
 set autowrite						" 自动保存
-"set cursorline						" 突出显示当前行
-set cursorcolumn					" 高亮显示列
+set cursorline						" 突出显示当前行
+"set cursorcolumn					" 高亮显示列
 set confirm							" 在处理未保存或只读文件的时候，弹出确认
 set autoindent						" 自动缩进
 set tabstop=4						" Tab键的宽度
@@ -31,6 +31,8 @@ set scrolloff=10					" 光标移动到buffer的顶部和底部时保持10行距�
 set clipboard=unnamed				" 默认使用系统剪切板
 set paste							" 关闭黏贴时乱缩进
 "set relativenumber					" 启用相对行号
+set incsearch						" 增强查找
+set ai!                             " 设置自动缩进
 
 set background=dark 
 let g:solarized_termcolors=256  
@@ -146,13 +148,14 @@ call vundle#begin()
 	Plugin 'winmanager'
 	Plugin 'godlygeek/tabular'
 	Plugin 'Markdown'
-"	Plugin 'instant-markdown.vim'
 	Plugin 'suan/vim-instant-markdown'
 	Plugin 'Valloric/YouCompleteMe'						  		"自动补齐
 	Plugin 'ctrlp.vim'                                    		"文件搜索
 	Plugin 'tomasr/molokai'									  	"一种颜色主题
 	Plugin 'bling/vim-airline'							  		"状态栏增强
-	Plugin 'altercation/vim-colors-solarized'
+	Plugin 'altercation/vim-colors-solarized'					"一种颜色主题
+	Plugin 'incsearch.vim'										"查找插件
+	Plugin 'commentary.vim'										"gc快速注释
 	" 由Git支持但不再github上的插件仓库 Plugin 'git clone 后面的地址'
 "	Plugin 'git://git.wincent.com/command-t.git'
 	" 本地的Git仓库(例如自己的插件) Plugin 'file:///+本地插件仓库绝对路径'
