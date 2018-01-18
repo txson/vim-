@@ -149,7 +149,9 @@ call vundle#begin()
 	Plugin 'godlygeek/tabular'
 	Plugin 'Markdown'
 	Plugin 'suan/vim-instant-markdown'
-	Plugin 'Valloric/YouCompleteMe'						  		"自动补齐
+	Plugin 'https://github.com/plasticboy/vim-markdown'
+	Plugin 'Valloric/YouCompleteMe'						  		"自动补齐 ./install.sh --clang-completer 
+	Plugin 'rdnetto/YCM-Generator'
 	Plugin 'ctrlp.vim'                                    		"文件搜索
 	Plugin 'tomasr/molokai'									  	"一种颜色主题
 	Plugin 'bling/vim-airline'							  		"状态栏增强
@@ -181,11 +183,14 @@ call vundle#begin()
 	" 查阅 :h vundle 获取更多细节和wiki以及FAQ
 	" 将你自己对非插件片段放在这行之后
 
-
+" 写配置文件的方法
+" 1.有makefile的时候使用，脚本
+" 2.没有的时候在，编译的脚本中加上-DCMAKE_EXPORT_COMPILE_COMMANDS=ON，然后在.ycm_extra_conf.py
+" 的compilation_database_folder这一行加上生成的compilation_commands.json文件路径
 " 寻找全局配置文件
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 " 禁用syntastic来对python检查
-let g:syntastic_ignore_files=[".*\.py$"] 
+"let g:syntastic_ignore_files=[".*\.py$"] 
 " 使用ctags生成的tags文件
 let g:ycm_collect_identifiers_from_tag_files = 1
 " 开启语义补全
@@ -213,4 +218,5 @@ let g:ycm_error_symbol='>>'
 let g:ycm_warning_symbol='>*'
 " 不查询ultisnips提供的代码模板补全，如果需要，设置成1即可
 " let g:ycm_use_ultisnips_completer=0
-"
+"关闭语法提示
+let g:ycm_show_diagnostics_ui = 0 
